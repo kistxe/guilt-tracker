@@ -1,0 +1,117 @@
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 2rem;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-name {
+  margin: 0 0 0.5rem 0;
+  color: #1f2937;
+  font-size: 2rem;
+}
+
+.project-description {
+  margin: 0 0 1rem 0;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.project-reward {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.project-deadline {
+  color: #666;
+  font-weight: 500;
+}
+
+.project-deadline.overdue {
+  color: #dc2626;
+}
+
+.project-actions {
+  flex-shrink: 0;
+}
+
+.delete-project-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-project-btn:hover {
+  background: #fee2e2;
+  border-color: #fecaca;
+}
+
+.delete-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+}
+
+.delete-confirm p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.confirm-delete,
+.cancel-delete {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.confirm-delete {
+  background: #dc2626;
+  color: white;
+}
+
+.confirm-delete:hover {
+  background: #b91c1c;
+}
+
+.cancel-delete {
+  background: white;
+  color: #666;
+  border: 1px solid #d1d5db;
+}
+
+.cancel-delete:hover {
+  background: #f3f4f6;
+}

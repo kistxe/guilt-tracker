@@ -1,0 +1,109 @@
+.task-form {
+  width: 100%;
+}
+
+.add-task-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px dashed #d1d5db;
+  background: white;
+  border-radius: 8px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.add-task-btn:hover {
+  border-color: #9ca3af;
+  color: #333;
+  background: #f9fafb;
+}
+
+.task-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  font-size: 0.875rem;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.form-input-number {
+  width: 80px;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.submit-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: #2563eb;
+}
+
+.cancel-btn {
+  background: white;
+  color: #666;
+  border: 1px solid #d1d5db;
+}
+
+.cancel-btn:hover {
+  background: #f3f4f6;
+}
