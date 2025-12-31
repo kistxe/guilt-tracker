@@ -140,46 +140,48 @@ export function App() {
               />
 
               {progressState && (
-                <div className="progress-section">
-                  <GuiltMeter
-                    guiltPercentage={progressState.guiltPercentage}
-                    color={guiltMeterColor}
-                  />
-                  <MotivationalMessage message={motivationalMessage} />
+                <div className="content-grid">
+                  <div className="progress-section">
+                    <GuiltMeter
+                      guiltPercentage={progressState.guiltPercentage}
+                      color={guiltMeterColor}
+                    />
+                    <MotivationalMessage message={motivationalMessage} />
 
-                  <div className="progress-stats">
-                    <div className="stat">
-                      <span className="stat-label">Completed</span>
-                      <span className="stat-value">
-                        {progressState.completedTasks}/
-                        {progressState.totalTasks}
-                      </span>
-                    </div>
-                    <div className="stat">
-                      <span className="stat-label">Progress</span>
-                      <span className="stat-value">
-                        {progressState.progressPercentage}%
-                      </span>
-                    </div>
-                    {currentProject.reward && (
+                    <div className="progress-stats">
                       <div className="stat">
-                        <span className="stat-label">Reward</span>
-                        <span className="stat-value">{currentProject.reward}</span>
+                        <span className="stat-label">Completed</span>
+                        <span className="stat-value">
+                          {progressState.completedTasks}/
+                          {progressState.totalTasks}
+                        </span>
                       </div>
-                    )}
+                      <div className="stat">
+                        <span className="stat-label">Progress</span>
+                        <span className="stat-value">
+                          {progressState.progressPercentage}%
+                        </span>
+                      </div>
+                      {currentProject.reward && (
+                        <div className="stat">
+                          <span className="stat-label">Reward</span>
+                          <span className="stat-value">{currentProject.reward}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="tasks-section">
+                    <h2>Tasks</h2>
+                    <TaskForm onAddTask={handleAddTask} />
+                    <TaskList
+                      tasks={currentProject.tasks}
+                      onToggleTask={handleToggleTask}
+                      onRemoveTask={handleRemoveTask}
+                    />
                   </div>
                 </div>
               )}
-
-              <div className="tasks-section">
-                <h2>Tasks</h2>
-                <TaskForm onAddTask={handleAddTask} />
-                <TaskList
-                  tasks={currentProject.tasks}
-                  onToggleTask={handleToggleTask}
-                  onRemoveTask={handleRemoveTask}
-                />
-              </div>
             </div>
           ) : (
             <div className="empty-main">

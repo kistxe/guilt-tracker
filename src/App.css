@@ -107,11 +107,20 @@ body {
   color: #333;
 }
 
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  align-items: start;
+}
+
 .tasks-section {
   background: white;
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid #e5e7eb;
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
 }
 
 .tasks-section h2 {
@@ -181,6 +190,14 @@ body {
 
   .progress-stats {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tasks-section {
+    max-height: none;
   }
 }
 
