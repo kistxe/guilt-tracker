@@ -12,7 +12,7 @@
   background-size: 160% 160%;
   animation: chromeShift 16s ease-in-out infinite, slideIn 0.4s ease-out;
   border-radius: 12px;
-  border-left: 4px solid #b0b3b8;
+  /* Removed left accent border for a clean edge */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
